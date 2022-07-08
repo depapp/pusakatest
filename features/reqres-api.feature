@@ -5,7 +5,7 @@ Feature: Regres
   I want to make sure that everything works as expected
 
   Scenario: Get A User
-    Given I make a GET request to /api/users/1
+    Given I make a GET request to https://reqres.in/api/users/1
      When I receive a response
      Then I expect response should have a status 200
       And I expect response should have a json at data
@@ -29,7 +29,7 @@ Feature: Regres
       """
 
   Scenario: List Users
-    Given I make a GET request to /api/users
+    Given I make a GET request to https://reqres.in/api/users
       And I set query param page to 2
      When I receive a response
      Then I expect response should have a status 200
@@ -53,7 +53,7 @@ Feature: Regres
       And I store response at data[0].id as UserId
   
   Scenario: Get A User With Id
-    Given I make a GET request to /api/users/{id}
+    Given I make a GET request to https://reqres.in/api/users/{id}
       And I set path param id to $S{UserId}
      When I receive a response
      Then I expect response should have a status 200
@@ -68,7 +68,7 @@ Feature: Regres
       """
 
   Scenario: Create A User
-    Given I make a POST request to /api/users
+    Given I make a POST request to https://reqres.in/api/users
       And I set body to
       """
       {
