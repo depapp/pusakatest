@@ -1,6 +1,7 @@
-const { request, settings } = require('pactum');
-const { Before } = require('@cucumber/cucumber');
+const { request, settings } = require('pactum')
+const { Before } = require('@cucumber/cucumber')
 
 Before(() => {
-  settings.setReporterAutoRun(false);
-});
+  request.setBaseUrl('http://restapi.adequateshop.com')
+  settings.setReporterAutoRun(false)
+})
