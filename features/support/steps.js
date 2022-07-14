@@ -1,7 +1,13 @@
 const pactum = require('pactum')
 const { Given, When, Then, Before, After } = require('@cucumber/cucumber')
+const { randomData } = require('./data')
 
 let spec = pactum.spec()
+let fakerData = {
+  "name": randomData.name,
+  "email": randomData.email,
+  "password": randomData.password
+}
 
 Before(() => {
   spec = pactum.spec()
@@ -33,6 +39,11 @@ Given(/I set body to/, function (body) {
   } catch(error) {
     spec.withBody(body)
   }
+})
+
+Given('I use random test data to create an account', function () {
+  console.log(fakerData)
+  spec.withJson(fakerData)
 })
 
 Given(/^I upload file at "(.*)"$/, function (filePath) {
