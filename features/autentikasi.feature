@@ -3,11 +3,11 @@ Fitur: Autentikasi pada ADEQUATESHOP API
     Contoh Automation API untuk fitur Autentikasi
 
     Skenario: Registrasi Pengguna Baru Menggunakan Data Yang Sah (Valid)
-        Diasumsikan I make a "POST" request to "/api/authaccount/registration"
-        Dan I use random test data to create an account
-        Ketika I receive a response
-        Maka I expect response should have a status "200"
-        Dan I expect response should have a json schema
+        Diasumsikan Saya melakukan metode "POST" request pada "/api/authaccount/registration"
+        Dan Saya menggunakan data test acak
+        Ketika Saya menerima sebuah response API
+        Maka Saya mengharapkan status code response API nya "200"
+        Dan Saya mengharapkan response API nya memiliki schema json
         """
         {
             "type": "object",
@@ -40,8 +40,8 @@ Fitur: Autentikasi pada ADEQUATESHOP API
         """
 
     Skenario: Registrasi Pengguna Baru Menggunakan Data Yang Sudah Ada
-        Diasumsikan I make a "POST" request to "/api/authaccount/registration"
-        Dan I set body to
+        Diasumsikan Saya melakukan metode "POST" request pada "/api/authaccount/registration"
+        Dan Saya set data untuk body menggunakan
         """
         {
             "name": "PactumJS 01",
@@ -49,9 +49,9 @@ Fitur: Autentikasi pada ADEQUATESHOP API
             "password": 123456
         }
         """
-        Ketika I receive a response
-        Maka I expect response should have a status "200"
-        Dan I expect response should have a json
+        Ketika Saya menerima sebuah response API
+        Maka Saya mengharapkan status code response API nya "200"
+        Dan Saya mengharapkan response API nya memiliki json
         """
         {
             "code": 1,
@@ -61,8 +61,8 @@ Fitur: Autentikasi pada ADEQUATESHOP API
         """
 
     Skenario: Registrasi Pengguna Baru Menggunakan Data Yang Tidak Sah (Invalid)
-        Diasumsikan I make a "POST" request to "/api/authaccount/registration"
-        Dan I set body to
+        Diasumsikan Saya melakukan metode "POST" request pada "/api/authaccount/registration"
+        Dan Saya set data untuk body menggunakan
         """
         {
             "name": "PactumJS XXX",
@@ -70,9 +70,9 @@ Fitur: Autentikasi pada ADEQUATESHOP API
             "password": 123456
         }
         """
-        Ketika I receive a response
-        Maka I expect response should have a status "400"
-        Dan I expect response should have a json at "ModelState"
+        Ketika Saya menerima sebuah response API
+        Maka Saya mengharapkan status code response API nya "400"
+        Dan Saya mengharapkan response API nya memiliki json pada "ModelState"
         """
         {
             "User.email": [
@@ -82,17 +82,17 @@ Fitur: Autentikasi pada ADEQUATESHOP API
         """
 
     Skenario: Pengguna Melakukan Login dengan Data Yang Sah (Valid)
-        Diasumsikan I make a "POST" request to "/api/authaccount/login"
-        Dan I set body to
+        Diasumsikan Saya melakukan metode "POST" request pada "/api/authaccount/login"
+        Dan Saya set data untuk body menggunakan
         """
         {
             "email": "pactumjs001@gmail.com",
             "password": 123456
         }
         """
-        Ketika I receive a response
-        Maka I expect response should have a status "200"
-        Dan I expect response should have a json schema at "data"
+        Ketika Saya menerima sebuah response API
+        Maka Saya mengharapkan status code response API nya "200"
+        Dan Saya mengharapkan response API nya memiliki schema json pada "data"
         """
         {
             "type": "object",
@@ -114,17 +114,17 @@ Fitur: Autentikasi pada ADEQUATESHOP API
         """
 
     Skenario: Pengguna Melakukan Login dengan Data Yang Tidak Sah (Invalid)
-        Diasumsikan I make a "POST" request to "/api/authaccount/login"
-        Dan I set body to
+        Diasumsikan Saya melakukan metode "POST" request pada "/api/authaccount/login"
+        Dan Saya set data untuk body menggunakan
         """
         {
             "email": "invalidaccount@email.com",
             "password": 111222333
         }
         """
-        Ketika I receive a response
-        Maka I expect response should have a status "200"
-        Dan I expect response should have a json
+        Ketika Saya menerima sebuah response API
+        Maka Saya mengharapkan status code response API nya "200"
+        Dan Saya mengharapkan response API nya memiliki json
         """
         {
             "code": 1,
