@@ -4,8 +4,8 @@
   "description": "pusakapicu is an automation testing tool based on pactum using bdd (cucumber) style",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --language id",
-    "test-publish": "cucumber-js --language id --publish"
+    "test": "cucumber-js --config config/cucumber.json",
+    "test-publish": "cucumber-js --config config/cucumber.json --publish"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/depapp/pusakapicu#readme",
   "devDependencies": {
-    "@cucumber/cucumber": "^8.4.0",
+    "@cucumber/cucumber": "^8.5.0",
     "@faker-js/faker": "^7.3.0",
     "mocha": "^10.0.0",
-    "pactum": "^3.1.11"
+    "pactum": "^3.1.13"
   }
 }

@@ -42,3 +42,9 @@ jobs:
 
     - name: test
       run: npm run test
+
+    - name: archive cucumber report
+      uses: actions/upload-artifact@v3
+      with:
+        name: cucumber-report
+        path: cucumber-report.html

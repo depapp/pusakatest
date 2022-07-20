@@ -126,3 +126,6 @@ dist
 
 # Local History for Visual Studio Code
 .history/
+
+# report
+*.html
