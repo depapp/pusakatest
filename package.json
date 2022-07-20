@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js --config config/cucumber.json",
-    "test-publish": "cucumber-js --config config/cucumber.json --publish-quiet"
+    "test-publish": "cucumber-js --config config/cucumber.json --publish"
   },
   "repository": {
     "type": "git",
