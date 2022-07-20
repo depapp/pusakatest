@@ -17,6 +17,12 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - shell: bash
+      env:
+        CUCUMBER_PUBLISH_TOKEN: ${{ secrets.CUCUMBER_PUBLISH_TOKEN }}
+      run: export CUCUMBER_PUBLISH_TOKEN=CUCUMBER_PUBLISH_TOKEN
+
+    steps:
     - name: checkout
       uses: actions/checkout@v2
 
