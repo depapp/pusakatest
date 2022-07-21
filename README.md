@@ -36,7 +36,7 @@ Fitur: Autentikasi pada ADEQUATESHOP API
 
 nama _**pusakatest (pusaka & test)**_ terinspirasi dari [pusakata](https://www.instagram.com/pusakata), seorang musisi Indonesia.
 
-## cara penggunaan
+## :gear: cara penggunaan
 
 - pastikan Anda sudah memiliki `nodejs` & `npm`. untuk mengecek apakah `nodejs` & `npm` sudah ter-install atau belum, bisa menggunakan `command` berikut ini:
 ```bash
@@ -71,7 +71,7 @@ npm run test
 0m02.506s (executing steps: 0m02.485s)
 ```
 
-## cara penulisan skrip
+## :bulb: cara penulisan skrip
 
 untuk menambahkan `test-case` pada proyek ini, bisa dengan cara membuat file baru pada folder `/features` dengan format `nama_file.feature`
 
@@ -87,7 +87,7 @@ Fitur: API REQRES.IN
 ```
 untuk mengetahui daftar syntax yang bisa digunakan, bisa dilihat di [DOCS.md](https://github.com/depapp/pusakatest/blob/main/DOCS.md)
 
-## test report
+## :books: test report
 
 proyek ini dilengkapi dengan `test report` yang berbentuk `.html`. ketika program dijalankan, maka akan otomatis melakukan generate `test report`.
 
