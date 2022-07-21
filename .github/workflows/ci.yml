@@ -1,4 +1,4 @@
-name: pusakapicu-ci
+name: pusakatest-ci
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  api-test:
+  automation-test:
 
     runs-on: ubuntu-latest
 
@@ -37,13 +37,18 @@ jobs:
         path: node_modules
         key: node_modules-${{ runner.OS }}-node_modules-${{ hashFiles('**/package-lock.json') }}
 
+    - name: cucumber-reports env variable
+      env:
+        PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+      run: export CUCUMBER_PUBLISH_TOKEN=$PUBLISH_TOKEN
+
     - name: install dependencies
       run: npm install
 
     - name: test
       run: npm run test-publish
 
-    - name: archive cucumber report
+    - name: archive report
       uses: actions/upload-artifact@v3
       with:
         name: cucumber-report
