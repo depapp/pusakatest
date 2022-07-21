@@ -40,7 +40,7 @@ jobs:
     - name: cucumber-reports env variable
       env:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
-      run: export CUCUMBER_PUBLISH_TOKEN=$PUBLISH_TOKEN
+      run: export CUCUMBER_PUBLISH_TOKEN=$PUBLISH_TOKEN >> $GITHUB_ENV
 
     - name: install dependencies
       run: npm install
