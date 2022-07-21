@@ -46,7 +46,9 @@ jobs:
       run: npm install
 
     - name: test
-      run: npm run test-publish
+      run: |
+        export CUCUMBER_PUBLISH_TOKEN=0042d6cf-cc31-4940-8818-d7a10793fa1c
+        npm run test-publish
 
     - name: archive report
       uses: actions/upload-artifact@v3
