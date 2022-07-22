@@ -3,7 +3,7 @@ Fitur: Autentikasi pada ADEQUATESHOP API
     Contoh Automation API untuk fitur Autentikasi
 
     Skenario: Registrasi Pengguna Baru Menggunakan Data Yang Sah (Valid)
-        Diasumsikan Saya melakukan metode "POST" request pada "/api/authaccount/registration"
+        Diasumsikan Saya melakukan metode "POST" request pada "http://restapi.adequateshop.com/api/authaccount/registration"
         Dan Saya menggunakan data test acak
         Ketika Saya menerima sebuah response API
         Maka Saya mengharapkan status code response API nya "200"
@@ -40,7 +40,7 @@ Fitur: Autentikasi pada ADEQUATESHOP API
         """
 
     Skenario: Registrasi Pengguna Baru Menggunakan Data Yang Sudah Ada
-        Diasumsikan Saya melakukan metode "POST" request pada "/api/authaccount/registration"
+        Diasumsikan Saya melakukan metode "POST" request pada "http://restapi.adequateshop.com/api/authaccount/registration"
         Dan Saya set data untuk body menggunakan
         """
         {
@@ -61,7 +61,7 @@ Fitur: Autentikasi pada ADEQUATESHOP API
         """
 
     Skenario: Registrasi Pengguna Baru Menggunakan Data Yang Tidak Sah (Invalid)
-        Diasumsikan Saya melakukan metode "POST" request pada "/api/authaccount/registration"
+        Diasumsikan Saya melakukan metode "POST" request pada "http://restapi.adequateshop.com/api/authaccount/registration"
         Dan Saya set data untuk body menggunakan
         """
         {
@@ -82,7 +82,7 @@ Fitur: Autentikasi pada ADEQUATESHOP API
         """
 
     Skenario: Pengguna Melakukan Login dengan Data Yang Sah (Valid)
-        Diasumsikan Saya melakukan metode "POST" request pada "/api/authaccount/login"
+        Diasumsikan Saya melakukan metode "POST" request pada "http://restapi.adequateshop.com/api/authaccount/login"
         Dan Saya set data untuk body menggunakan
         """
         {
@@ -114,7 +114,7 @@ Fitur: Autentikasi pada ADEQUATESHOP API
         """
 
     Skenario: Pengguna Melakukan Login dengan Data Yang Tidak Sah (Invalid)
-        Diasumsikan Saya melakukan metode "POST" request pada "/api/authaccount/login"
+        Diasumsikan Saya melakukan metode "POST" request pada "http://restapi.adequateshop.com/api/authaccount/login"
         Dan Saya set data untuk body menggunakan
         """
         {
