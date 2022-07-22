@@ -105,3 +105,4 @@ hasil dari command di atas akan menampilkan link untuk `test report` nya
 │ Keep reports forever: https://reports.cucumber.io/profile                │
 └──────────────────────────────────────────────────────────────────────────┘
 ```
+![image](https://user-images.githubusercontent.com/6134774/180352363-27a1e2e8-bb6f-474a-9e6b-5363a3c5dcda.png)
