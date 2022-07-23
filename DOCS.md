@@ -7,9 +7,9 @@
 | :----- | :----- |
 | Feature | Fitur |
 | Scenario | Skenario |
-| Given | Diasumsikan |
+| Given | Dengan |
 | And | Dan |
-| WHen | Ketika |
+| When | Ketika |
 | Then | Maka |
 
 contoh:
@@ -17,7 +17,7 @@ contoh:
 Fitur: xxxxx
 
     Skenario: xxxxx
-        Diasumsikan xxxxx
+        Dengan xxxxx
         Dan xxxxx
         Ketika xxxxx
         Maka xxxxx
