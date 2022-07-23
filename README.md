@@ -14,7 +14,7 @@ Fitur: Autentikasi pada ADEQUATESHOP API
     Contoh Automation API untuk fitur Autentikasi
 
     Skenario: Pengguna Melakukan Login dengan Data Yang Tidak Sah (Invalid)
-        Diasumsikan Saya melakukan metode "POST" request pada "http://restapi.adequateshop.com/api/authaccount/login"
+        Dengan Saya melakukan metode "POST" request pada "http://restapi.adequateshop.com/api/authaccount/login"
         Dan Saya set data untuk body menggunakan
         """
         {
@@ -81,7 +81,7 @@ setelah itu, kita bisa menuliskan dengan format
 Fitur: API REQRES.IN
 
     Skenario: Menampilkan daftar user pada API REQRES.IN
-        Diasumsikan Saya melakukan metode "GET" request pada "https://reqres.in/api/users"
+        Dengan Saya melakukan metode "GET" request pada "https://reqres.in/api/users"
         Ketika Saya menerima sebuah response API
         Maka Saya mengharapkan status code response API nya "200"
 ```
