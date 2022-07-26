@@ -1,26 +1,42 @@
 {
-  "name": "pusakapicu",
-  "version": "1.0.0",
-  "description": "pusakapicu is an automation testing tool based on pactum using bdd (cucumber) style",
+  "name": "pusakatest",
+  "version": "2.0.1",
+  "description": "pusakatest is an automation testing tool based on pactum using bdd (cucumber) style",
   "main": "index.js",
+  "bin": "bin/create-project",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "test": "cucumber-js --config config/cucumber.json",
-    "test-publish": "cucumber-js --config config/cucumber.json --publish"
+    "test": "echo \"hello world!!\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/depapp/pusakapicu.git"
+    "url": "git+https://github.com/depapp/pusakatest.git"
   },
   "author": "@depapp",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/depapp/pusakapicu/issues"
+    "url": "https://github.com/depapp/pusakatest/issues"
   },
-  "homepage": "https://github.com/depapp/pusakapicu#readme",
-  "devDependencies": {
-    "@cucumber/cucumber": "^8.5.0",
-    "@faker-js/faker": "^7.3.0",
-    "mocha": "^10.0.0",
-    "pactum": "^3.1.13"
-  }
+  "homepage": "https://github.com/depapp/pusakatest#readme",
+  "dependencies": {
+    "arg": "^4.1.0",
+    "chalk": "^2.4.2",
+    "covgen": "^3.1.0",
+    "esm": "^3.2.18",
+    "execa": "^1.0.0",
+    "figlet": "^1.5.2",
+    "gitignore": "^0.6.0",
+    "inquirer": "^6.2.2",
+    "listr": "^0.14.3",
+    "ncp": "^2.0.0",
+    "pkg-install": "^0.2.0",
+    "spdx-license-list": "^5.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "templates/"
+  ]
 }
