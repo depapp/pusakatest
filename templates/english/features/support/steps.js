@@ -13,6 +13,10 @@ Before(() => {
   spec = pactum.spec()
 })
 
+Given(/^I make a "(.*)" request to "(.*)"$/, function (method, endpoint) {
+  spec[method.toLowerCase()](endpoint)
+})
+
 Given(/^I set path param "(.*)" to "(.*)"$/, function (key, value) {
   spec.withPathParams(key, value)
 })
@@ -29,12 +33,33 @@ Given(/^I set header "(.*)" to "(.*)"$/, function (key, value) {
   spec.withHeaders(key, value)
 })
 
+Given(/I set body to/, function (body) {
+  try {
+    spec.withJson(JSON.parse(body))
+  } catch(error) {
+    spec.withBody(body)
+  }
+})
+
+Given('I use random test data to create an account', function () {
+  console.log(fakerData)
+  spec.withJson(fakerData)
+})
+
 Given(/^I upload file at "(.*)"$/, function (filePath) {
   spec.withFile(filePath)
 })
 
 Given(/^I set multi-part form param "(.*)" to "(.*)"$/, function (key, value) {
   spec.withMultiPartFormData(key, value)
+})
+
+When('I receive a response', async function () {
+  await spec.toss()
+})
+
+Then('I expect response should have a status "{int}"', function (code) {
+  spec.response().should.have.status(code)
 })
 
 Then(/^I expect response header "(.*)" should be "(.*)"$/, function (key, value) {
@@ -45,12 +70,28 @@ Then(/^I expect response header "(.*)" should have "(.*)"$/, function (key, valu
   spec.response().should.have.headerContains(key, value)
 })
 
+Then(/^I expect response should have a json$/, function (json) {
+  spec.response().should.have.json(JSON.parse(json))
+})
+
+Then(/^I expect response should have a json at "(.*)"$/, function (path, value) {
+  spec.response().should.have.json(path, JSON.parse(value))
+})
+
 Then(/^I expect response should have a json like$/, function (json) {
   spec.response().should.have.jsonLike(JSON.parse(json))
 })
 
 Then(/^I expect response should have a json like at "(.*)"$/, function (path, value) {
   spec.response().should.have.jsonLike(path, JSON.parse(value))
+})
+
+Then(/^I expect response should have a json schema$/, function (json) {
+  spec.response().should.have.jsonSchema(JSON.parse(json))
+})
+
+Then(/^I expect response should have a json schema at "(.*)"$/, function (path, value) {
+  spec.response().should.have.jsonSchema(path, JSON.parse(value))
 })
 
 Then(/^I expect response should have a body$/, function (body) {
@@ -63,48 +104,6 @@ Then('I expect response should have "{string}"', function (handler) {
 
 Then(/^I store response at "(.*)" as "(.*)"$/, function (path, name) {
   spec.stores(name, path)
-})
-
-// TRANSLATED TO BAHASA INDONESIA
-Given(/^Saya melakukan metode "(.*)" request pada "(.*)"$/, function (method, endpoint) {
-  spec[method.toLowerCase()](endpoint)
-})
-
-Given(/Saya set data untuk body menggunakan/, function (body) {
-  try {
-    spec.withJson(JSON.parse(body))
-  } catch(error) {
-    spec.withBody(body)
-  }
-})
-
-Given('Saya menggunakan data test acak', function () {
-  console.log(fakerData)
-  spec.withJson(fakerData)
-})
-
-When('Saya menerima sebuah response API', async function () {
-  await spec.toss()
-})
-
-Then('Saya mengharapkan status code response API nya "{int}"', function (code) {
-  spec.response().should.have.status(code)
-})
-
-Then(/^Saya mengharapkan response API nya memiliki schema json$/, function (json) {
-  spec.response().should.have.jsonSchema(JSON.parse(json))
-})
-
-Then(/^Saya mengharapkan response API nya memiliki schema json pada "(.*)"$/, function (path, value) {
-  spec.response().should.have.jsonSchema(path, JSON.parse(value))
-})
-
-Then(/^Saya mengharapkan response API nya memiliki json$/, function (json) {
-  spec.response().should.have.json(JSON.parse(json))
-})
-
-Then(/^Saya mengharapkan response API nya memiliki json pada "(.*)"$/, function (path, value) {
-  spec.response().should.have.json(path, JSON.parse(value))
 })
 
 After(() => {
