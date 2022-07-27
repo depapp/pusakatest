@@ -1,7 +1,7 @@
 
 # pusakatest
 
-<img width="682" alt="image" src="https://user-images.githubusercontent.com/6134774/181021798-15d57ebd-63c2-4925-90cc-5ae607cd272b.png">
+[![asciicast](https://asciinema.org/a/511165.svg)](https://asciinema.org/a/511165)
 
 ## :gear: setup
 - make sure `nodejs` and `npm` is already installed. you can verify it using these commands
