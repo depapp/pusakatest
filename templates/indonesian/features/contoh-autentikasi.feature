@@ -2,43 +2,6 @@ Fitur: Autentikasi pada ADEQUATESHOP API
 
     Contoh Automation API untuk fitur Autentikasi
 
-    Skenario: Registrasi Pengguna Baru Menggunakan Data Yang Sah (Valid)
-        Dengan Saya melakukan metode "POST" request pada "http://restapi.adequateshop.com/api/authaccount/registration"
-        Dan Saya menggunakan data test acak
-        Ketika Saya menerima sebuah response API
-        Maka Saya mengharapkan status code response API nya "200"
-        Dan Saya mengharapkan response API nya memiliki schema json
-        """
-        {
-            "type": "object",
-            "properties": {
-                "code": {
-                    "type": "integer"
-                },
-                "message": {
-                    "type": "string"
-                },
-                "data": {
-                    "type": "object",
-                    "properties": {
-                        "Id": {
-                            "type": "integer"
-                        },
-                        "Name": {
-                            "type": "string"
-                        },
-                        "Email": {
-                            "type": "string"
-                        },
-                        "Token": {
-                            "type": "string"
-                        }
-                    }
-                }
-            }
-        }
-        """
-
     Skenario: Registrasi Pengguna Baru Menggunakan Data Yang Sudah Ada
         Dengan Saya melakukan metode "POST" request pada "http://restapi.adequateshop.com/api/authaccount/registration"
         Dan Saya set data untuk body menggunakan

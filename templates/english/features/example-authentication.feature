@@ -2,43 +2,6 @@ Feature: Authentication on ADEQUATESHOP API
 
     API Automation with Authentication example
 
-    Scenario: User Registration using Valid Data
-        Given I make a "POST" request to "http://restapi.adequateshop.com/api/authaccount/registration"
-        And I use random test data to create an account
-        When I receive a response
-        Then I expect response should have a status "200"
-        And I expect response should have a json schema
-        """
-        {
-            "type": "object",
-            "properties": {
-                "code": {
-                    "type": "integer"
-                },
-                "message": {
-                    "type": "string"
-                },
-                "data": {
-                    "type": "object",
-                    "properties": {
-                        "Id": {
-                            "type": "integer"
-                        },
-                        "Name": {
-                            "type": "string"
-                        },
-                        "Email": {
-                            "type": "string"
-                        },
-                        "Token": {
-                            "type": "string"
-                        }
-                    }
-                }
-            }
-        }
-        """
-
     Scenario: User Registration using Registered Data
         Given I make a "POST" request to "http://restapi.adequateshop.com/api/authaccount/registration"
         And I set body to
