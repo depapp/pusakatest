@@ -23,16 +23,13 @@
   "dependencies": {
     "arg": "^4.1.0",
     "chalk": "^2.4.2",
-    "covgen": "^3.1.0",
-    "esm": "^3.2.18",
+    "esm": "^3.2.25",
     "execa": "^1.0.0",
     "figlet": "^1.5.2",
-    "gitignore": "^0.6.0",
     "inquirer": "^6.2.2",
     "listr": "^0.14.3",
     "ncp": "^2.0.0",
-    "pkg-install": "^0.2.0",
-    "spdx-license-list": "^5.0.0"
+    "pkg-install": "^0.2.0"
   },
   "files": [
     "bin/",
