@@ -1,7 +1,7 @@
 const { faker } = require('@faker-js/faker')
 
 const randomData = {
-    name: faker.name.findName(),
+    name: faker.name.fullName(),
     email: faker.internet.email(),
     password: faker.internet.password()
 }
