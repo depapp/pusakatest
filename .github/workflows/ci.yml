@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  automation-test:
+  pusakatest-ci:
 
     runs-on: ubuntu-latest
 
@@ -44,4 +44,4 @@ jobs:
       run: npm link
 
     - name: run pusakatest
-      run: pusakatest
+      run: pusakatest -y
