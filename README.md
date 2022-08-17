@@ -3,6 +3,9 @@
 
 [![asciicast](https://asciinema.org/a/511165.svg)](https://asciinema.org/a/511165)
 
+## :construction_worker: status
+[![pusakatest-ci](https://github.com/depapp/pusakatest/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/depapp/pusakatest/actions/workflows/ci.yml)
+
 ## :gear: setup
 - make sure `nodejs` and `npm` is already installed. you can verify it using these commands
 ```bash
