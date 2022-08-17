@@ -44,7 +44,4 @@ jobs:
       run: npm link
 
     - name: run pusakatest
-      run: pusakatest -y
-
-    - name: run pusakatest api-automation
-      run: npm run test
+      run: pusakatest

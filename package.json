@@ -8,7 +8,7 @@
     "access": "public"
   },
   "scripts": {
-    "test": "cucumber-js --config config/cucumber.json"
+    "test": "echo \"hello world!!\" && exit 1"
   },
   "repository": {
     "type": "git",
