@@ -19,6 +19,8 @@ npm -v
 mkdir hello-pusakatest && cd hello-pusakatest
 ```
 - to setup `pusakatest`, you can simply run this command (and follow the instructions)
+  - If you don't have a package.json in your file directory, it will be copied from one of the templates available at [pusakatest](https://github.com/depapp/pusakatest/blob/644409e90fe29f9cdab3b0da3ab9bf497150da79/templates/english/package.json#L20) when you run below command
+  - If you already have a package.json file, add all the dependencies mentioned in [pusakatest](https://github.com/depapp/pusakatest/blob/644409e90fe29f9cdab3b0da3ab9bf497150da79/templates/english/package.json#L20) to your package.json (below command will not override or replace your package.json file)
 ```bash
 npx pusakatest
 ```
