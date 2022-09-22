@@ -1,4 +1,7 @@
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 # pusakatest
 
 [![asciicast](https://asciinema.org/a/511165.svg)](https://asciinema.org/a/511165)
@@ -53,3 +56,24 @@ Feature: API REQRES.IN
 - [pactum-cucumber-boilerplate](https://github.com/pactumjs/pactum-cucumber-boilerplate)
 - [Dominik Kundel](https://www.twilio.com/blog/how-to-build-a-cli-with-node-js)
 - [old-README](https://github.com/depapp/pusakatest/tree/0af4d1c0a0ce712fd2380f8de50b1562134468e4#readme)
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="depapp.github.io"><img src="https://avatars.githubusercontent.com/u/6134774?v=4?s=100" width="100px;" alt=""/><br /><sub><b>depa panjie purnama</b></sub></a><br /><a href="https://github.com/depapp/pusakatest/commits?author=depapp" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
