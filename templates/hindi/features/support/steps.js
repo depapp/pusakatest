@@ -13,7 +13,7 @@ Before(() => {
   spec = pactum.spec()
 })
 
-Given(/^I make a "(.*)" request to "(.*)"$/, function (method, endpoint) {
+Given(/^मैं एक बनाता हूँ "(.*)" का अनुरोध "(.*)"$/, function (method, endpoint) {
   spec[method.toLowerCase()](endpoint)
 })
 
@@ -70,11 +70,11 @@ Then(/^I expect response header "(.*)" should have "(.*)"$/, function (key, valu
   spec.response().should.have.headerContains(key, value)
 })
 
-Then(/^I expect response should have a json$/, function (json) {
+Then(/^मुझे उम्मीद है कि प्रतिक्रिया में एक जेसन होना चाहिए$/, function (json) {
   spec.response().should.have.json(JSON.parse(json))
 })
 
-Then(/^I expect response should have a json at "(.*)"$/, function (path, value) {
+Then(/^मुझे उम्मीद है कि प्रतिक्रिया में एक जेसन होना चाहिए "(.*)"$/, function (path, value) {
   spec.response().should.have.json(path, JSON.parse(value))
 })
 
@@ -90,7 +90,7 @@ Then(/^I expect response should have a json schema$/, function (json) {
   spec.response().should.have.jsonSchema(JSON.parse(json))
 })
 
-Then(/^I expect response should have a json schema at "(.*)"$/, function (path, value) {
+Then(/^मुझे उम्मीद है कि प्रतिक्रिया में एक जेसन स्कीमा होना चाहिए "(.*)"$/, function (path, value) {
   spec.response().should.have.jsonSchema(path, JSON.parse(value))
 })
 

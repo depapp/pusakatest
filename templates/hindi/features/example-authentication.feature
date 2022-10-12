@@ -3,7 +3,7 @@
     प्रमाणीकरण उदाहरण के साथ एपीआई ऑटोमेशन
 
     परिदृश्य: पंजीकृत डेटा का उपयोग कर उपयोगकर्ता पंजीकरण
-        अगर I make a "POST" request to "http://restapi.adequateshop.com/api/authaccount/registration"
+        अगर मैं एक बनाता हूँ "POST" का अनुरोध "http://restapi.adequateshop.com/api/authaccount/registration"
         और मैंने शरीर को पर सेट किया है
         """
         {
@@ -14,7 +14,7 @@
         """
         जब मुझे एक प्रतिक्रिया मिलती है
         तब मुझे उम्मीद है कि प्रतिक्रिया की स्थिति होनी चाहिए "200"
-        और I expect response should have a json
+        और मुझे उम्मीद है कि प्रतिक्रिया में एक जेसन होना चाहिए
         """
         {
             "code": 1,
@@ -24,7 +24,7 @@
         """
 
     परिदृश्य: अमान्य डेटा का उपयोग कर उपयोगकर्ता पंजीकरण
-        अगर I make a "POST" request to "http://restapi.adequateshop.com/api/authaccount/registration"
+        अगर मैं एक बनाता हूँ "POST" का अनुरोध "http://restapi.adequateshop.com/api/authaccount/registration"
         और मैंने शरीर को पर सेट किया है
         """
         {
@@ -35,7 +35,7 @@
         """
         जब मुझे एक प्रतिक्रिया मिलती है
         तब मुझे उम्मीद है कि प्रतिक्रिया की स्थिति होनी चाहिए "400"
-        और I expect response should have a json at "ModelState"
+        और मुझे उम्मीद है कि प्रतिक्रिया में एक जेसन होना चाहिए "ModelState"
         """
         {
             "User.email": [
@@ -45,7 +45,7 @@
         """
 
     परिदृश्य: वैध डेटा का उपयोग करके उपयोगकर्ता लॉगिन
-        अगर I make a "POST" request to "http://restapi.adequateshop.com/api/authaccount/login"
+        अगर मैं एक बनाता हूँ "POST" का अनुरोध "http://restapi.adequateshop.com/api/authaccount/login"
         और मैंने शरीर को पर सेट किया है
         """
         {
@@ -55,7 +55,7 @@
         """
         जब मुझे एक प्रतिक्रिया मिलती है
         तब मुझे उम्मीद है कि प्रतिक्रिया की स्थिति होनी चाहिए "200"
-        और I expect response should have a json schema at "data"
+        और मुझे उम्मीद है कि प्रतिक्रिया में एक जेसन स्कीमा होना चाहिए "data"
         """
         {
             "type": "object",
@@ -77,7 +77,7 @@
         """
 
     परिदृश्य: अमान्य डेटा का उपयोग करके उपयोगकर्ता लॉगिन
-        अगर I make a "POST" request to "http://restapi.adequateshop.com/api/authaccount/login"
+        अगर मैं एक बनाता हूँ "POST" का अनुरोध "http://restapi.adequateshop.com/api/authaccount/login"
         और मैंने शरीर को पर सेट किया है
         """
         {
@@ -87,7 +87,7 @@
         """
         जब मुझे एक प्रतिक्रिया मिलती है
         तब मुझे उम्मीद है कि प्रतिक्रिया की स्थिति होनी चाहिए "200"
-        और I expect response should have a json
+        और मुझे उम्मीद है कि प्रतिक्रिया में एक जेसन होना चाहिए
         """
         {
             "code": 1,
