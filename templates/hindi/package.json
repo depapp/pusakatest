@@ -1,0 +1,26 @@
+{
+    "name": "pusakatest",
+    "version": "2.0.1",
+    "description": "pusakatest is an automation testing tool based on pactum using bdd (cucumber) style",
+    "main": "index.js",
+    "scripts": {
+      "test": "cucumber-js --config config/cucumber.json",
+      "test-publish": "cucumber-js --config config/cucumber.json --publish"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/depapp/pusakatest.git"
+    },
+    "author": "@depapp",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/depapp/pusakatest/issues"
+    },
+    "homepage": "https://github.com/depapp/pusakatest#readme",
+    "devDependencies": {
+      "@cucumber/cucumber": "latest",
+      "@faker-js/faker": "latest",
+      "mocha": "latest",
+      "pactum": "latest"
+    }
+}
