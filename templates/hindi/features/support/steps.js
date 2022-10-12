@@ -33,7 +33,7 @@ Given(/^I set header "(.*)" to "(.*)"$/, function (key, value) {
   spec.withHeaders(key, value)
 })
 
-Given(/I set body to/, function (body) {
+Given(/मैंने शरीर को पर सेट किया है/, function (body) {
   try {
     spec.withJson(JSON.parse(body))
   } catch(error) {
@@ -41,16 +41,16 @@ Given(/I set body to/, function (body) {
   }
 })
 
-Given('I use random test data to create an account', function () {
+Given('मैं खाता बनाने के लिए यादृच्छिक परीक्षण डेटा का उपयोग करता हूं', function () {
   console.log(fakerData)
   spec.withJson(fakerData)
 })
 
-Given(/^I upload file at "(.*)"$/, function (filePath) {
+Given(/^मैं यहाँ पर फ़ाइल अपलोड करता हूँ "(.*)"$/, function (filePath) {
   spec.withFile(filePath)
 })
 
-Given(/^I set multi-part form param "(.*)" to "(.*)"$/, function (key, value) {
+Given(/^मैंने बहु-भाग प्रपत्र परम सेट किया है "(.*)" to "(.*)"$/, function (key, value) {
   spec.withMultiPartFormData(key, value)
 })
 
@@ -58,7 +58,7 @@ When('मुझे एक प्रतिक्रिया मिलती ह�
   await spec.toss()
 })
 
-Then('I expect response should have a status "{int}"', function (code) {
+Then('मुझे उम्मीद है कि प्रतिक्रिया की स्थिति होनी चाहिए "{int}"', function (code) {
   spec.response().should.have.status(code)
 })
 
@@ -98,7 +98,7 @@ Then(/^I expect response should have a body$/, function (body) {
   spec.response().should.have.body(body)
 })
 
-Then('I expect response should have "{string}"', function (handler) {
+Then('मुझे उम्मीद है कि प्रतिक्रिया होनी चाहिए "{string}"', function (handler) {
   spec.response().should.have._(handler)
 })
 

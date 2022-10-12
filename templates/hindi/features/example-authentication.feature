@@ -1,10 +1,10 @@
-रूप लेख: Authentication on ADEQUATESHOP API
+रूप लेख: प्रमाणीकरण चालू ADEQUATESHOP API
 
-    API Automation with Authentication example
+    प्रमाणीकरण उदाहरण के साथ एपीआई ऑटोमेशन
 
-    परिदृश्य: User Registration using Registered Data
+    परिदृश्य: पंजीकृत डेटा का उपयोग कर उपयोगकर्ता पंजीकरण
         अगर I make a "POST" request to "http://restapi.adequateshop.com/api/authaccount/registration"
-        और I set body to
+        और मैंने शरीर को पर सेट किया है
         """
         {
             "name": "PactumJS 01",
@@ -13,7 +13,7 @@
         }
         """
         जब मुझे एक प्रतिक्रिया मिलती है
-        तब I expect response should have a status "200"
+        तब मुझे उम्मीद है कि प्रतिक्रिया की स्थिति होनी चाहिए "200"
         और I expect response should have a json
         """
         {
@@ -23,9 +23,9 @@
         }
         """
 
-    परिदृश्य: User Registration using Invalid Data
+    परिदृश्य: अमान्य डेटा का उपयोग कर उपयोगकर्ता पंजीकरण
         अगर I make a "POST" request to "http://restapi.adequateshop.com/api/authaccount/registration"
-        और I set body to
+        और मैंने शरीर को पर सेट किया है
         """
         {
             "name": "PactumJS XXX",
@@ -34,7 +34,7 @@
         }
         """
         जब मुझे एक प्रतिक्रिया मिलती है
-        तब I expect response should have a status "400"
+        तब मुझे उम्मीद है कि प्रतिक्रिया की स्थिति होनी चाहिए "400"
         और I expect response should have a json at "ModelState"
         """
         {
@@ -44,9 +44,9 @@
         }
         """
 
-    परिदृश्य: User Login using Valid Data
+    परिदृश्य: वैध डेटा का उपयोग करके उपयोगकर्ता लॉगिन
         अगर I make a "POST" request to "http://restapi.adequateshop.com/api/authaccount/login"
-        और I set body to
+        और मैंने शरीर को पर सेट किया है
         """
         {
             "email": "pactumjs001@gmail.com",
@@ -54,7 +54,7 @@
         }
         """
         जब मुझे एक प्रतिक्रिया मिलती है
-        तब I expect response should have a status "200"
+        तब मुझे उम्मीद है कि प्रतिक्रिया की स्थिति होनी चाहिए "200"
         और I expect response should have a json schema at "data"
         """
         {
@@ -76,9 +76,9 @@
         }
         """
 
-    परिदृश्य: User Login using Invalid Data
+    परिदृश्य: अमान्य डेटा का उपयोग करके उपयोगकर्ता लॉगिन
         अगर I make a "POST" request to "http://restapi.adequateshop.com/api/authaccount/login"
-        और I set body to
+        और मैंने शरीर को पर सेट किया है
         """
         {
             "email": "invalidaccount@email.com",
@@ -86,7 +86,7 @@
         }
         """
         जब मुझे एक प्रतिक्रिया मिलती है
-        तब I expect response should have a status "200"
+        तब मुझे उम्मीद है कि प्रतिक्रिया की स्थिति होनी चाहिए "200"
         और I expect response should have a json
         """
         {
