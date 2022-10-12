@@ -49,6 +49,9 @@ Feature: API REQRES.IN
         Then I expect response should have a status "200"
 ```
 
+## :fire: contributors
+<a href="https://github.com/depapp/pusakatest/graphs/contributors"><img src="https://contrib.rocks/image?repo=depapp/pusakatest" alt="All of amazing contributors"></a>
+
 ## :bookmark: credits
 - [pactum-cucumber-boilerplate](https://github.com/pactumjs/pactum-cucumber-boilerplate)
 - [Dominik Kundel](https://www.twilio.com/blog/how-to-build-a-cli-with-node-js)
