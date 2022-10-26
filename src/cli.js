@@ -36,7 +36,7 @@ async function promptForMissingOptions(options) {
       type: 'list',
       name: 'template',
       message: 'what language/localisation do you want to use?',
-      choices: ['indonesian', 'english', 'korean'],
+      choices: ['indonesian', 'english', 'korean', 'hindi'],
       default: defaultTemplate,
     });
   }
