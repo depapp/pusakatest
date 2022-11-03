@@ -35,5 +35,32 @@
     "bin/",
     "src/",
     "templates/"
+  ],
+  "keywords": [
+    "api",
+    "REST",
+    "automation",
+    "testing",
+    "component",
+    "service",
+    "contract",
+    "integration",
+    "e2e",
+    "fuzz",
+    "bdd",
+    "tdd",
+    "cucumber",
+    "mocha",
+    "jest",
+    "mock",
+    "server",
+    "JSON",
+    "pactum",
+    "pactumjs",
+    "microservice",
+    "microservices",
+    "test",
+    "http",
+    "GraphQL"
   ]
 }
