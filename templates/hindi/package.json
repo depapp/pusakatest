@@ -1,6 +1,6 @@
 {
     "name": "pusakatest",
-    "version": "2.0.1",
+    "version": "2.2.1",
     "description": "pusakatest is an automation testing tool based on pactum using bdd (cucumber) style",
     "main": "index.js",
     "scripts": {
