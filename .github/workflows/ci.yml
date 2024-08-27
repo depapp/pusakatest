@@ -55,5 +55,7 @@ jobs:
       if: matrix.node-version != '22.x'
 
     - name: run pusakatest
-      run: pusakatest -y
+      run: |
+        node -v
+        pusakatest -y
       if: matrix.node-version != '22.x'
