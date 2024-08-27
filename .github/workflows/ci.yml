@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [14.x, 20.x, 22.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -39,9 +39,21 @@ jobs:
 
     - name: install dependencies
       run: npm install
+      continue-on-error: ${{ matrix.node-version == '22.x' }}
+
+    - name: check for unsupported engine warning
+      if: matrix.node-version == '22.x'
+      run: |
+        npm install 2>&1 | tee npm-install.log | grep "npm warn EBADENGINE Unsupported engine"
+        if [ $? -ne 0 ]; then
+          echo "Expected engine warning not found"
+          exit 1
+        fi
 
     - name: symlink using npm-link
       run: npm link
+      if: matrix.node-version != '22.x'
 
     - name: run pusakatest
       run: pusakatest -y
+      if: matrix.node-version != '22.x'
