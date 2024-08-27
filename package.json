@@ -62,5 +62,8 @@
     "test",
     "http",
     "GraphQL"
-  ]
+  ],
+  "engines": {
+    "node": ">=14 <=20"
+  }
 }
