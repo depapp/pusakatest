@@ -3,7 +3,10 @@
   "version": "2.4.1",
   "description": "pusakatest is an automation testing tool based on pactum using bdd (cucumber) style",
   "main": "index.js",
-  "bin": "bin/create-project",
+  "type": "module",
+  "bin": {
+    "create-project": "bin/create-project.mjs"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -21,7 +24,6 @@
     "arg": "^4.1.0",
     "chalk": "^2.4.2",
     "clear": "^0.1.0",
-    "esm": "^3.2.25",
     "execa": "^1.0.0",
     "figlet": "^1.5.2",
     "inquirer": "^6.2.2",
