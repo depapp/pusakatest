@@ -1,14 +1,11 @@
 {
   "name": "pusakatest",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "pusakatest is an automation testing tool based on pactum using bdd (cucumber) style",
   "main": "index.js",
   "bin": "bin/create-project",
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "test": "echo \"hello world!!\" && exit 1"
   },
   "repository": {
     "type": "git",

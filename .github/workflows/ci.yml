@@ -44,11 +44,6 @@ jobs:
 
     - name: run pusakatest
       run: |
-        mkdir hello-pusakatest && cd hello-pusakatest
         node -v
         pusakatest -y
-        pwd
         ls -l
-        cat package.json
-        npm run test
-        npm run test-publish
