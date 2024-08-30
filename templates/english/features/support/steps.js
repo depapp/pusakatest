@@ -111,9 +111,8 @@ Then(/^I expect response should contain a json$/, function (json) {
 })
 
 Then('I log the response body', async function () {
-  const response = await spec.toss().then((res) => res.json);
-  console.log(response);
-  this.attach(JSON.stringify(response, null, 2), 'application/json');
+  const response = await spec.toss().then((res) => res.json)
+  this.attach(JSON.stringify(response, null, 2), 'application/json')
 });
 
 After(() => {

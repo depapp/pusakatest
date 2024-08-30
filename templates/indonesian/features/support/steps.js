@@ -54,6 +54,15 @@ Then(/^Saya mengharapkan response API nya memiliki json pada "(.*)"$/, function 
   spec.response().should.have.json(path, JSON.parse(value))
 })
 
+Then(/^Saya mengharapkan response API nya berisi json$/, function (json) {
+  spec.response().should.have.jsonLike(JSON.parse(json))
+})
+
+Then('Saya mencatat isi response body nya', async function () {
+  const response = await spec.toss().then((res) => res.json)
+  this.attach(JSON.stringify(response, null, 2), 'application/json')
+});
+
 After(() => {
   spec.end()
 })

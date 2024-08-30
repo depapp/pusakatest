@@ -7,6 +7,7 @@ import path from 'path';
 import { projectInstall } from 'pkg-install';
 import { promisify } from 'util';
 import figlet from 'figlet';
+import clear from 'clear';
 
 const access = promisify(fs.access);
 const writeFile = promisify(fs.writeFile);
@@ -46,6 +47,14 @@ export async function createProject(options) {
         task: () => copyTemplateFiles(options),
       },
       {
+        title: 'create .gitignore',
+        task: async () => {
+          const gitignoreContent = 'node_modules/\ncucumber-report.html';
+          const gitignorePath = path.join(options.targetDirectory, '.gitignore');
+          await writeFile(gitignorePath, gitignoreContent);
+        },
+      },
+      {
         title: 'install dependencies',
         task: () =>
           projectInstall({
@@ -59,6 +68,7 @@ export async function createProject(options) {
   );
 
   await tasks.run();
+  clear();
   figlet(`pusakatest`, (err, data) => {
     console.log((data) + '\n');
     console.log(
@@ -66,6 +76,7 @@ export async function createProject(options) {
         ` is ready to use. just run `+chalk.green(`npm run test`)
       )
     );
+    console.log('');
   });
   return true;
 }

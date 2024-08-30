@@ -22,7 +22,7 @@ function parseArgumentsIntoOptions(rawArgs) {
 }
 
 async function promptForMissingOptions(options) {
-  const defaultTemplate = 'indonesian';
+  const defaultTemplate = 'english';
   if (options.skipPrompts) {
     return {
       ...options,
@@ -36,7 +36,7 @@ async function promptForMissingOptions(options) {
       type: 'list',
       name: 'template',
       message: 'what language/localisation do you want to use?',
-      choices: ['indonesian', 'english', 'korean', 'hindi'],
+      choices: ['english', 'indonesian', 'javanese', 'korean', 'hindi'],
       default: defaultTemplate,
     });
   }

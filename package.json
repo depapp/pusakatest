@@ -1,6 +1,6 @@
 {
   "name": "pusakatest",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "pusakatest is an automation testing tool based on pactum using bdd (cucumber) style",
   "main": "index.js",
   "bin": "bin/create-project",
@@ -23,6 +23,7 @@
   "dependencies": {
     "arg": "^4.1.0",
     "chalk": "^2.4.2",
+    "clear": "^0.1.0",
     "esm": "^3.2.25",
     "execa": "^1.0.0",
     "figlet": "^1.5.2",
@@ -62,8 +63,5 @@
     "test",
     "http",
     "GraphQL"
-  ],
-  "engines": {
-    "node": ">=14 <=20"
-  }
+  ]
 }
