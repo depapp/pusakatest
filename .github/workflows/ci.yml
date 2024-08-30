@@ -44,6 +44,7 @@ jobs:
 
     - name: run pusakatest
       run: |
+        mkdir asdf && cd asdf
         node -v
         pusakatest -y
         ls -l
