@@ -48,10 +48,7 @@ jobs:
         node -v
         pusakatest -y
         pwd
-        ls
         ls -l
-
-    - name: execute test cases
-      run: |
+        cat package.json
         npm run test
         npm run test-publish
