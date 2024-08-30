@@ -48,3 +48,5 @@ jobs:
         node -v
         pusakatest -y
         ls -l
+        cat package.json
+        npm run test-publish
