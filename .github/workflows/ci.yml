@@ -47,6 +47,11 @@ jobs:
         mkdir hello-pusakatest && cd hello-pusakatest
         node -v
         pusakatest -y
+        pwd
+        ls
+        ls -l
 
     - name: execute test cases
-      run: npm run test-publish
+      run: |
+        npm run test
+        npm run test-publish
