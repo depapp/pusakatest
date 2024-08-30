@@ -1,7 +1,10 @@
 
 # pusakatest
 
-[![asciicast](https://asciinema.org/a/511165.svg)](https://asciinema.org/a/511165)
+[comment]: [![asciicast](https://asciinema.org/a/511165.svg)](https://asciinema.org/a/511165)
+
+| ![pusakatest-1](https://github.com/user-attachments/assets/11d8c57b-a0b7-434d-86b1-16bbc4b19199) | ![pusakatest-2](https://github.com/user-attachments/assets/d8d4ddaa-f41d-46ab-8583-4a43e3a0d433) |
+| --- | --- |
 
 ## :construction_worker: status
 [![pusakatest-ci](https://github.com/depapp/pusakatest/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/depapp/pusakatest/actions/workflows/ci.yml)
